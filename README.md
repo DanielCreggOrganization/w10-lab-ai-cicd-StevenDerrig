@@ -112,33 +112,20 @@ Instead of writing YAML manually or copy-pasting, we will ask the AI Agent to cr
 
 -----
 
-## Part 3: AI in the Terminal (20 Mins)
+## Part 3: Pipeline Updates (20 Mins)
 
-*Goal: Use Copilot CLI to write shell scripts without knowing the syntax.*
+*Goal: Use Copilot to write shell scripts without knowing the syntax.*
 
 Often, CI pipelines need to do "scripty" things, like verifying specific package versions. This is usually hard to remember.
 
-### Step 1: Enable CLI Helper
-
-In your Codespace terminal, type:
-
-```bash
-gh copilot --help
-```
-
-If prompted to authenticate, follow the steps. If it says "command not found", standard Copilot Chat can also help here, but the CLI tool is specifically optimised for shell commands.
-
-### Step 2: The "How do I..." Challenge
+### Step 1: The "How do I..." Challenge
 
 We want to add a step to our pipeline that prints the version of Flask currently installed.
 
-1.  In the terminal, ask Copilot for the command:
+1.  Ask Copilot for the command:  
+**Prompt**  
 
-    ```bash
-    gh copilot suggest "Command to print the installed version of Flask using pip"
-    ```
-
-    *(Or ask Copilot Chat: "Write a bash command to grep the Flask version from pip freeze")*
+    > Write a bash command to grep the Flask version from pip freeze
 
 2.  Copilot will offer a command (likely `pip show Flask` or `pip freeze | grep Flask`). Select **Copy to clipboard**.
 
